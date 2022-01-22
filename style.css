@@ -1,0 +1,264 @@
+:root {
+    --primary: rgb(255,149,203);
+    --spacing: 4rem;
+}
+
+body {
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 1.4em;
+    animation: animate__swing;
+}
+
+h2 {
+    margin-bottom: var(--spacing);
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.neutral-theme {
+    background-color: white;
+    --button-color: var(--primary);
+    --button-hover-color-: rgb(197,111,255);
+    --button-hover-color-: linear-gradient(0deg, rgba(197,111,255,1) 0%, rgba(255,149,203,1) 20%, rgba(255,149,203,1) 70%, rgba(136,207,251,1) 100%);
+}
+
+.primary-theme {
+    color: white;
+    background: rgb(197,111,255);
+    background: linear-gradient(0deg, rgba(197,111,255,1) 0%, rgba(255,149,203,1) 46%, rgba(136,207,251,1) 80%, rgba(136,207,251,1) 95%, rgba(255,255,255,1) 100%);
+    --button-color: white;
+    --button-hover-color: var(--primary);
+}
+
+.heading-highlight {
+    color: var(--primary);
+}
+
+.button {
+    display: inline-block;
+    width: max-content;
+    padding: 1rem;
+    border: 3px solid var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-color);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Mochiy Pop P One', Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+    color: white;
+    background: var(--button-hover-color);
+    background-image: linear-gradient(90deg, rgba(197,111,255,1) 0%, rgba(255,149,203,1) 50%, rgba(136,207,251,1) 100%);
+}
+
+.button-2 {
+    display: inline-block;
+    width: max-content;
+    padding: 1rem;
+    border: 3px solid var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-color);
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(to right,rgba(197,111,255,1) 0%, rgba(136,207,251,1) 100%);
+    font-family: 'Mochiy Pop P One', Arial, Helvetica, sans-serif;
+}
+
+.button-2:hover {
+    color: white;
+    background-image: linear-gradient(to right,rgba(136,207,251,1) 0%, rgba(197,111,255,1) 100%);
+}
+
+section{
+    padding: var(--spacing);
+}
+
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
+    filter: grayscale(100%);
+}
+
+.about-img:hover{
+    filter: grayscale(0);
+}
+
+img {
+    max-width: 350px;
+}
+
+p{
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+.about-text {
+    text-align: justify;
+    padding: var(--spacing);
+}
+
+blockquote {
+    margin-top: var(--spacing);
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Architects Daughter', Bradley Hand, cursive;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-style: normal;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+article {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.article-img {
+    margin-bottom: 2rem;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    padding: var(--spacing);
+    text-align: center;
+    color: white;
+    background-color: rgb(255,149,203);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing);
+    gap: 4rem;
+}
+
+.social-link {
+    display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    color: transparent;
+    background: no-repeat;
+    background-size: 60px;
+    transform: scale(1);
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.linkedin {
+    background-image: url(https://victorious-curvy-bookcase.glitch.me/images/linkedin.svg)
+}
+
+.twitter {
+    background-image: url(https://victorious-curvy-bookcase.glitch.me/images/twitter.svg)
+}
+
+.github {
+    background-image: url(https://victorious-curvy-bookcase.glitch.me/images/github.svg)
+}
+
+.about {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid rgb(197,111,255);
+    border-right: 100vw solid transparent;
+}
+
+.contact {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing);
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid white;
+    border-left: 100vw solid transparent;
+}
+
+@media (min-width: 800px) {
+    .about-container {
+        display: flex;
+    }
+
+    .about-text {
+        margin-left: var (--spacing);
+    }
+
+    article {
+        flex-direction: row;
+        max-width: 960px;
+        margin: 0 auto var(--spacing);
+    }
+
+    .about-img {
+        margin-left: 2em;
+        object-fit: cover;
+    }
+}
+
+.article-text{
+    border-top: 3px dotted var(--primary);
+    margin-left: 10px;
+    padding-top: 10vh;
+}
